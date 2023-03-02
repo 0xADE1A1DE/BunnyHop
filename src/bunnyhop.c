@@ -11,7 +11,6 @@
 #define PAGELEN 4096
 #define PAGEMASK 0xFFF
 
-void *create_buffer(uint64_t adrs, int size);
 void free_buf(void *buffer, uint64_t len); 
 
 bhfunc gentrain(uint64_t adrs, int size, int branch_distance)
