@@ -3,6 +3,7 @@
 make
 cc noise.c -o noise
 
+mkdir results
 rm -f results/busy/*
 
 cpu0=1
