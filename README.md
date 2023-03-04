@@ -2,7 +2,7 @@
 *Authors:* **Zhiyuan Zhang**, **Mingtian Tao**, **Sioli O'Connell**, 
 **Chitchanok Chuengsatiansup**, **Daniel Genkin**, **Yuval Yarom**
 
-*The paper is accepted in USENIX Security 2023*
+*The paper is accepted in USENIX Security 2023 Fall Round*
 
 ## What is BunnyHop ?
 Bunnyhop is a technique that translates the BPU prediction (BTB specifically) into cache status.
