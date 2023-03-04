@@ -76,14 +76,15 @@ int main(int argc, char *argv[])
       }
 
       memory_barrier
+      /****
+	Configure the waiting cycles to get better results.
+      ******/
       delayloop(1800);
 
-#if 1
       for (int i = 0; i < NUM_OF_PRIME; i++) {
         probe_set[i]();
         memory_barrier
       }
-#endif
 
       uint64_t time_probe = __rdtscp(&dummy);
       asm volatile("mov (%0), %%eax":: "r"((void *)monitor_address[2]));
@@ -99,11 +100,9 @@ int main(int argc, char *argv[])
         
       memory_barrier
       delayloop(1000);
-      //delayloop(800);
     }
 
     if (hits != 8) {
-      //printf("%d\n", hits);
       return 1;
     }
     uint8_t secret = 0;
@@ -112,17 +111,6 @@ int main(int argc, char *argv[])
       printf("%d ", pp_results[i]);
     }
     printf("\n");
-    //printf("%d\n", secret);
-
-#if 0
-    printf("Hits: %4d\n", hits);
-    printf("Branch[%d]: %4ld   Miss Count\n", 2, overall_time);
-
-    printf("%ld %d\n", fr_detect[0], pp_results[0]);
-    for (int i = 1; i < hits; i++) {
-      printf("%ld %d\n", fr_detect[i] - fr_detect[i-1], pp_results[i]);
-    }
-#endif
 }
 
 void *map(const char *elf_path, unsigned long *size)
