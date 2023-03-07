@@ -99,6 +99,7 @@ for (int s = 0; s < SAMPLES; s++) {
 	memory_barrier
     #if train 
         trainer[0]();
+        trainer[1]();
         memory_barrier
     #endif
 
@@ -154,7 +155,7 @@ void *create_trainer2(uint64_t adrs, int size, int distance)
     for (i = 0; i < jmp_distance; i++)
         asm_assemble_str(al, "NOP");
 #if 1
-    for (int i = 0; i < 13; i++) {
+    for (int i = 0; i < 12; i++) {
         asm_assemble_str(al, "JMP 4091");
         for (int t = 0; t < 4091; t++)
             asm_assemble_str(al, "NOP");
