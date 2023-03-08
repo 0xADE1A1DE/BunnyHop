@@ -36,3 +36,6 @@ Alternatively, you can run `python3 process.py` to plot 16 peaks.
 
 ## Results
 We provide the expecte result in pearson.pdf and sbox_access.pdf.
+
+## A video guide
+[![A video Guide and expected result](https://youtu.be/2nW5m3-qStw/0.jpg)](https://youtu.be/2nW5m3-qStw" Video Guide and expected result")
