@@ -1,4 +1,5 @@
 The code under this folder provides code for BunnyHop-evict attack on AES kernel module.
+**The cache coloring we provide only targets at Intel processors with 4 physical cores.**
 
 - Compile and install the kernel
 The colored kernel source code is available at: https://doi.org/10.5281/zenodo.7704477
