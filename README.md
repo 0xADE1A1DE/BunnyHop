@@ -21,6 +21,11 @@ AssemblyLine is a powerful tool that translates assembly code into binary
 and write them to the memory at a given location.  
 We use AssemblyLine to generate functions to test the BTB content. 
 
+### General system configuration
+Replace the original line of *GRUB_CMDLINE_LINUX_DEFAULT* with `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash isolcpus=1,7 spectre_v2=on"`. The isolated processors should be two sibling cores.  
+Set the processor governor to *performance*.
+
+
 ### Reverse Engineer the Instruction Prefetcher
 The evaluation starts with experiments on reverse engineering the Instruction Prefetcher.  
 The code is under folder *IP_RE*.

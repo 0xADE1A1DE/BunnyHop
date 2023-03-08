@@ -22,3 +22,10 @@ The branch we target is a call instruction. We highlight the vulnerable branch i
 
 6. You can verify the result with command sudo `cat /proc/kallsyms | grep kill_something_info`  
 **Note that the program returns the physical address of the tatget branch. So the lower bits of the returned address and the *kill_something_info* will differ in lower bits.**
+
+## Video Guide
+We provide a video guide at https://youtu.be/EUz15zuR-J4 .
+
+
+## Notes
+We have tested the scirpt against several machines, and for linux kernel 5.4.0-42-generic, our script does not work. In practice, one can target at a different branch to break kaslr. For the demonstration that BunnyHop-Reload can break KASLR, you could simply switch the kernel version.  
