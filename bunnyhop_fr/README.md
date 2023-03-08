@@ -19,3 +19,5 @@ to get the basic physical address for the vulnerable address.
 Namely, run `$./bh 1` to find the actual address if bit 21 is randomized to be 1.  
 Run `./bh 0` to find the actual address if bit 21 is randomized to be 0.
 
+6. You can verify the result with command sudo `cat /proc/kallsyms | grep kill_something_info`  
+**Note that the program returns the physical address of the tatget branch. So the lower bits of the returned address and the *kill_something_info* will differ in lower bits.**
