@@ -24,8 +24,12 @@
 //uint64_t branch_target = 0x810adf50ULL;
 
 // Kernel version 5.4.0-99-generic
-uint64_t branch_adrs = 0x810abcfbULL;
-uint64_t branch_target = 0x810ab9f0ULL;
+//uint64_t branch_adrs = 0x810abcfbULL;
+//uint64_t branch_target = 0x810ab9f0ULL;
+
+// Kernel version 5.19.0-32-generic
+uint64_t branch_adrs = 0x810e208bULL;
+uint64_t branch_target = 0x810e1b40ULL;
 
 int main(int arg, char* argv[])
 {
