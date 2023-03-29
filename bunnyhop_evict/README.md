@@ -12,7 +12,7 @@ Or you could follow the methods at https://phoenixnap.com/kb/build-linux-kernel 
 - Compile and install color_handler module.
 `$cd color_module/`  
 '$make'  
-'$sudo make insmod color_handler.ko'
+'$sudo insmod color_handler.ko'
 `$dmesg` to check if it is properly installed
 
 - Compile and install AES module
